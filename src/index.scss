@@ -1,0 +1,66 @@
+@use "./sass/" as *;
+
+// Global
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+io-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  font: inherit;
+  border: none;
+}
+
+input {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+io-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: $ff-poppins;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-lavender-blush;
+  color: $text-granite-gray;
+  font-size: $fontSize-6;
+  line-height: 1.8;
+}
