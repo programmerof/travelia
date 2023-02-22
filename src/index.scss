@@ -64,3 +64,41 @@ body {
   font-size: $fontSize-6;
   line-height: 1.8;
 }
+
+// Reused Styles
+
+.container {
+  padding-inline: 16px;
+}
+
+.btn {
+  height: 50px;
+  color: $text-white;
+  padding-inline: 30px;
+  border-radius: $radius-pill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: max-content;
+  transition: $transition-1;
+
+}
+
+.btn-primary {
+  background-color: $bg-majorelle-blue;
+
+  &:is(:hover, :focus-visible) {
+    background-color: $bg-ocean-blue;
+    box-shadow: $shadow-2;
+  }
+}
+
+.btn-secondary {
+  background-color: $bg-red-salsa;
+
+  &:is(:hover, :focus-visible) {
+    background-color: $bg-english-vermillion;
+    box-shadow: $shadow-3;
+  }
+}
