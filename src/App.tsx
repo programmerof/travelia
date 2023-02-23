@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
+  CTA,
   Destination,
   Experience,
   Gallery,
@@ -26,6 +27,7 @@ function App() {
         <Destination />
         <Experience />
         <Gallery />
+        <CTA />
       </main>
     </div>
   );
