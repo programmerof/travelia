@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header, Loader } from "./components";
+import { Header, Hero, Loader } from "./components";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -12,6 +12,9 @@ function App() {
     <div className="App">
       {/* {loading && <Loader />} */}
       <Header />
+      <main>
+        <Hero />
+      </main>
     </div>
   );
 }
