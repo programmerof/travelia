@@ -145,3 +145,12 @@ body {
 .w-100 {
   width: 100%;
 }
+
+.section-subtitle {
+  color: $text-majorelle-blue;
+  font-weight: $weight-medium;
+  text-transform: uppercase;
+}
+.section-title {
+  margin-block: 10px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Header, Hero, Loader } from "./components";
+import { Header, Hero, Loader, Service } from "./components";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -14,6 +14,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Service />
       </main>
     </div>
   );
