@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Destination, Header, Hero, Loader, Service } from "./components";
+import { Destination, Experience, Header, Hero, Loader, Service } from "./components";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -16,6 +16,7 @@ function App() {
         <Hero />
         <Service />
         <Destination />
+        <Experience />
       </main>
     </div>
   );
