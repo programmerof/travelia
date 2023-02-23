@@ -154,3 +154,9 @@ body {
 .section-title {
   margin-block: 10px;
 }
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: $bg-gainsboro;
+  overflow: hidden;
+}
