@@ -1,0 +1,16 @@
+@use "../../sass/" as *;
+
+.gallery {
+  .section-title {
+    margin-block-end: 40px;
+  }
+
+  &-list {
+    display: grid;
+    gap: 15px;
+
+    .item-banner {
+      border-radius: $radius-30;
+    }
+  }
+}
