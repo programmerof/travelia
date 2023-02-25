@@ -6,3 +6,4 @@ export { default as Destination } from './Destination/Destination';
 export { default as Experience } from './Experience/Experience';
 export { default as Gallery } from './Gallery/Gallery';
 export { default as CTA } from './CTA/CTA';
+export { default as Footer } from './Footer/Footer';

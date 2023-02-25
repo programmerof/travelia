@@ -3,6 +3,7 @@ import {
   CTA,
   Destination,
   Experience,
+  Footer,
   Gallery,
   Header,
   Hero,
@@ -29,6 +30,7 @@ function App() {
         <Gallery />
         <CTA />
       </main>
+      <Footer />
     </div>
   );
 }

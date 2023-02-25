@@ -1,0 +1,116 @@
+@use "../../sass" as *;
+
+footer {
+  .footer-top {
+    display: grid;
+    gap: 40px;
+    padding-block: 60px;
+
+    .footer-brand {
+      .logo {
+        img {
+          width: 180px;
+        }
+      }
+      .footer-text {
+        margin-block: 20px;
+      }
+
+      .social-list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .social-link > * {
+          color: $text-majorelle-blue;
+          font-size: 4.5rem;
+          padding: 10px;
+          border-radius: $radius-pill;
+          transition: $transition-1;
+
+          &:is(:hover, :focus-visisble) {
+            background-color: $bg-majorelle-blue;
+            color: $text-white;
+          }
+        }
+      }
+    }
+  }
+  .footer-list {
+    .footer-list-title {
+      color: $text-gunmetal;
+      font-size: $fontSize-5;
+      font-weight: $weight-semiBold;
+      margin-block-end: 15px;
+    }
+
+    .footer-link {
+      margin-block-start: 10px;
+
+      &:is(:hover, :focus-visible) {
+        text-decoration: underline;
+      }
+    }
+
+    .footer-text {
+      margin-block-end: 15px;
+    }
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    .input-field {
+      height: 55px;
+      padding-inline: 25px 60px;
+      border: 1px solid $border-gainsboro;
+      color: $text-gunmetal;
+      border-radius: $radius-pill;
+
+      &:focus {
+        border-color: $bg-majorelle-blue;
+      }
+    }
+
+    .input-btn {
+      width: 45px;
+      height: 45px;
+      background-color: $bg-majorelle-blue;
+      font-size: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: $radius-circle;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: $text-white;
+      transition: $transition-1;
+
+      & > * {
+        transform: translateX(-2px) rotate(45deg);
+      }
+      &:is(:hover, :focus-visible) {
+        background-color: $bg-ocean-blue;
+      }
+    }
+  }
+
+  .footer-bottom {
+    padding-block: 30px;
+    border-block-start: 1px solid $border-gainsboro;
+
+    .copyright {
+      margin-block-end: 20px;
+
+      &-link {
+        display: inline-block;
+        color: $text-majorelle-blue;
+        font-weight: $weight-medium;
+      }
+    }
+
+    .footer-bottom-link:is(:hover, :focus-visible) {
+      text-decoration: underline;
+    }
+  }
+}
