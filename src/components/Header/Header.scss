@@ -13,6 +13,10 @@
     background-color: $bg-white;
     box-shadow: $shadow-1;
     animation: slideIn 500ms ease forwards;
+
+    @include desktop-md {
+      padding-block: 15px;
+    }
   }
 
   .container {
@@ -39,6 +43,10 @@
   .logo {
     img {
       width: 160px;
+
+      @include desktop-lg {
+        width: 180px;
+      }
     }
   }
   .nav-toggle-btn {
@@ -75,6 +83,21 @@
     .navbar-list {
       margin-block-start: 50px;
 
+      @include desktop-md {
+        margin-block-start: 0;
+        display: flex;
+        gap: 30px;
+        margin-inline: auto;
+      }
+
+      @include desktop-lg {
+        gap: 50px;
+      }
+
+      @include desktop-xl {
+        gap: 70px;
+      }
+
       .navbar-link {
         position: relative;
         color: $text-gunmetal;
@@ -95,10 +118,23 @@
           border-radius: 5px;
           opacity: 0;
           transition: $transition-1;
+
+          @include desktop-md {
+            width: 10px;
+            height: 3px;
+            top: auto;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
         }
 
         &:is(:hover, :focus-visible, .active) {
           transform: translateX(10px);
+
+          @include desktop-md {
+            transform: unset;
+          }
         }
 
         &:is(:hover, :focus-visible, .active)::before {
@@ -114,6 +150,16 @@
       justify-content: space-around;
       align-items: center;
 
+      @include desktop-md {
+        border: none;
+        padding-block-start: 0;
+        gap: 30px;
+      }
+
+      @include desktop-lg {
+        gap: 40px;
+      }
+
       .login-btn {
         color: $text-gunmetal;
         font-size: $fontSize-7;
@@ -124,6 +170,34 @@
           opacity: 0.8;
         }
       }
+
+      .btn-primary {
+        @include desktop-md {
+          height: 45px;
+          padding-inline: 25px;
+        }
+      }
+    }
+
+    @include tablet {
+      padding-inline: 40px;
+      padding-block-start: 40px;
+    }
+  }
+
+  @include desktop-md {
+    .nav-toggle-btn,
+    .navbar-top,
+    .overlay {
+      display: none !important;
+    }
+
+    .navbar,
+    .navbar.active {
+      all: unset;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
     }
   }
 }

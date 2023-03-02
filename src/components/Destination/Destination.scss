@@ -3,11 +3,31 @@
 .destination {
   .section-title {
     margin-block-end: 40px;
+
+    @include desktop {
+      margin-block-end: 65px;
+    }
   }
 
   &-list {
     display: grid;
     gap: 30px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      gap: 50px 35px;
+    }
+
+    @include desktop-md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop-xl {
+      gap: 50px;
+    }
   }
 
   &-card {
@@ -33,11 +53,24 @@
       line-height: 1.45;
       padding: 5px 15px;
       border-radius: $radius-pill;
+
+      @include desktop-lg {
+        font-size: 2rem;
+        padding: 8px 20px;
+      }
     }
 
     .card-title {
       margin-block: 15px 5px;
       transition: $transition-1;
+
+      @include desktop {
+        margin-block-start: 25px;
+      }
+
+      @include desktop-lg {
+        margin-block: 30px 10px;
+      }
 
       &:is(:hover, :focus-visible) {
         color: $text-majorelle-blue;
@@ -52,6 +85,10 @@
     .card-rating {
       margin-block-start: 10px;
       gap: 10px;
+
+      @include desktop-lg {
+        margin-block-start: 15px;
+      }
 
       .span {
         background-color: $bg-sunglow-alpha-10;
@@ -69,5 +106,9 @@
   .btn {
     margin-inline: auto;
     margin-block-start: 40px;
+
+    @include desktop {
+      margin-block-start: 60px;
+    }
   }
 }

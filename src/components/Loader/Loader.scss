@@ -31,6 +31,10 @@
 
     img {
       animation: bounce 800ms ease-in-out infinite alternate;
+
+      @include desktop {
+        width: 80px;
+      }
     }
   }
 }

@@ -3,9 +3,19 @@
 .hero {
   padding-block-start: 150px;
 
+  @include desktop {
+    padding-block-start: 50px;
+  }
+
   .container {
     display: grid;
     gap: 50px;
+
+    @include desktop-md {
+      grid-template-columns: 0.8fr 1fr;
+      gap: 0;
+      align-items: center;
+    }
 
     .hero-subtitle {
       background-color: $bg-misty-rose;
@@ -17,19 +27,39 @@
       max-width: max-content;
       padding: 8px 20px;
       border-radius: $radius-pill;
+
+      @include desktop {
+        $fontSize-7: 1.8rem;
+        padding: 10px 30px;
+      }
     }
 
     .hero-title {
       margin-block: 20px;
+
+      @include desktop-lg {
+        margin-block: 30px;
+      }
     }
     .hero-text {
       margin-block-end: 30px;
+
+      @include tablet {
+        max-width: 42ch;
+      }
+
+      @include desktop-lg {
+        margin-block-end: 50px;
+      }
     }
     .btn-secondary {
       margin-block-end: 20px;
     }
 
     .wrapper {
+      @include desktop-md {
+        flex-wrap: wrap;
+      }
       .hero-btn {
         color: $text-gunmetal;
         font-weight: $weight-medium;
@@ -38,6 +68,10 @@
         gap: 30px;
         transition: $transition-1;
 
+        @include desktop {
+          gap: 32px;
+        }
+
         .btn-img {
           position: relative;
           width: 60px;
@@ -45,6 +79,11 @@
           background-color: $bg-gainsboro;
           border-radius: $radius-circle;
           box-shadow: $shadow-1;
+
+          @include desktop {
+            width: 80px;
+            height: 80px;
+          }
 
           .img-cover {
             border-radius: inherit;
@@ -59,12 +98,37 @@
             border-radius: $radius-circle;
             box-shadow: $shadow-1;
             box-sizing: content-box;
+
+            @include desktop {
+              padding: 12px;
+            }
           }
         }
         &:is(:hover, :focus-visible) {
           color: $text-majorelle-blue;
         }
       }
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .btn {
+          margin-block-end: 0;
+        }
+      }
+    }
+  }
+
+  .hero-banner {
+    @include desktop {
+      max-width: 550px;
+      margin-inline: auto;
+    }
+
+    @include desktop-md {
+      max-width: unset;
     }
   }
 }

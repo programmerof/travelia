@@ -4,17 +4,43 @@
   .container {
     display: grid;
     gap: 25px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      align-items: flex-start;
+    }
+
+    @include desktop {
+      gap: 35px;
+    }
+
+    @include desktop-lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop-xl {
+      grid-template-columns: 1fr repeat(3, 0.9fr);
+      gap: 50px;
+    }
   }
 
   .service-card {
     padding: 25px 20px;
     border-radius: $radius-20;
 
+    @include desktop {
+      padding: 40px 30px;
+    }
+
     &:nth-child(2) {
       background-color: $bg-chrome-yellow-alpha-5;
     }
     &:nth-child(3) {
       background-color: $bg-red-salsa-alpha-5;
+
+      @include desktop-xl {
+        margin-block-start: 80px;
+      }
     }
     &:nth-child(4) {
       background-color: $bg-majorelle-blue-alpha-5;
@@ -22,6 +48,31 @@
 
     .card-title {
       margin-block: 10px 5px;
+
+      @include desktop {
+        margin-block: 20px 10px;
+      }
+
+      @include desktop-md {
+        padding-inline-end: 85px;
+      }
+    }
+  }
+
+  .title-wrapper {
+    @include desktop-lg {
+      grid-column: span 3;
+    }
+
+    @include desktop-xl {
+      grid-column: auto;
+      padding-inline-end: 0;
+    }
+  }
+
+  @include desktop-xl {
+    .section-title {
+      margin-block-end: 20px;
     }
   }
 }
