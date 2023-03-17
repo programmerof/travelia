@@ -9,6 +9,7 @@ import {
   Hero,
   Loader,
   Service,
+  TripPlanner,
 } from "./components";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Hero />
         <Service />
         <Destination />
+        <TripPlanner />
         <Experience />
         <Gallery />
         <CTA />

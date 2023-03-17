@@ -2,6 +2,21 @@
 
 // Global
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  transition: $transition-2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5d5d5d;
+}
+::-webkit-scrollbar-track {
+  background-color: #eee9e9;
+}
+
 *,
 *::before,
 *::after {
@@ -91,7 +106,7 @@ body {
   @include desktop-lg {
     max-width: 1150px;
   }
-  
+
   @include desktop-xl {
     max-width: 1350px;
   }
