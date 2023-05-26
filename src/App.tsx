@@ -11,18 +11,25 @@ import {
   Service,
   TripPlanner,
 } from "./components";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 2000);
-  });
+  }, []);
 
   return (
     <div className="App">
       {/* {loading && <Loader />} */}
-      <Header />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/service" element={<Service />} />
+        </Routes>
+      </Router>
+
       <main>
         <Hero />
         <Service />

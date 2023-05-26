@@ -3,6 +3,7 @@ import { MdClose, MdMenu } from "react-icons/md";
 import LogoSVG from "../../images/logo.svg";
 import "./Header.scss";
 
+
 const Header = () => {
   const [show, setShow] = useState<boolean>(false);
   const headerRef = useRef<HTMLElement>(null);
@@ -54,9 +55,12 @@ const Header = () => {
             </li>
             <li className="navbar-item">
               <a href="/" className="navbar-link">
-                Services
+                Service
               </a>
             </li>
+            
+           
+           
             <li className="navbar-item">
               <a href="/" className="navbar-link">
                 Pricing
