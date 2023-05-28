@@ -1,9 +1,10 @@
-import GalleryImg1 from "../../images/gallery-1.jpg";
-import GalleryImg2 from "../../images/gallery-2.jpg";
-import GalleryImg3 from "../../images/gallery-3.jpg";
-import GalleryImg4 from "../../images/gallery-4.jpg";
-import GalleryImg5 from "../../images/gallery-5.jpg";
-import GalleryImg6 from "../../images/gallery-6.jpg";
+import GalleryImg1 from "../../images/Gallery/gallery-1.jpg";
+import GalleryImg2 from "../../images/Gallery/gallery-2.jpeg";
+import GalleryImg3 from "../../images/Gallery/gallery-3.jpg";
+import GalleryImg4 from "../../images/Gallery/gallery-4.jpg";
+import GalleryImg5 from "../../images/Gallery/gallery-5.jpg";
+import GalleryImg6 from "../../images/Gallery/gallery-6.jpg";
+
 
 import "./Gallery.scss";
 

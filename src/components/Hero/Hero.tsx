@@ -4,7 +4,7 @@ import { BsPlayFill } from "react-icons/bs";
 import HeroBg from "../../images/hero-bg.jpg";
 import TitleIcon from "../../images/title-icon.svg";
 import HeroBtn from "../../images/hero-button-img.jpg";
-import HeroBanner from "../../images/hero-banner.png";
+import HeroBanner from "../../images/nepali trek painting.jpg";
 import "./Hero.scss";
 
 const Hero = () => {
@@ -18,16 +18,15 @@ const Hero = () => {
         <div className="container">
           <div className="hero-content">
             <p className="hero-subtitle">
-              Explore the World
+            Discover Nepal's Majestic Trails
+{/* 🌍🏔️🥾🚶‍♂️🏞️🌄🏕️🇳🇵 */}🚶‍♂️🏞️🏔️
               <img src={TitleIcon} width={20} height={20} alt="world icon" />
             </p>
 
             <h1 className="h1 title hero-title">
-              It’s a Big World Out There, Go Explore
-            </h1>
+            Embark on Unforgettable Treks!</h1>
             <p className="hero-text">
-              We always make our customer happy by providing as many choices as
-              possible
+              Unleash Your Adventurous Spirit with our Expert Guides,as We Take You on Unforgettable Trekking Expeditions in Nepal!
             </p>
 
             <div className="wrapper">
@@ -36,7 +35,7 @@ const Hero = () => {
                 <MdOutlineChevronRight />
               </a>
               <button className="hero-btn">
-                <div className="btn-img">
+                {/* <div className="btn-img">
                   <img
                     src={HeroBtn}
                     alt="our story"
@@ -44,8 +43,8 @@ const Hero = () => {
                     className="img-cover"
                   />
                   <BsPlayFill className='icon-play' />
-                </div>
-                <p className="text">Watch our Story</p>
+                </div> */}
+                {/* <p className="text">Watch our Story</p> */}
               </button>
             </div>
           </div>

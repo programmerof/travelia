@@ -1,7 +1,7 @@
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook, BsTwitter } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
-import LogoSVG from "../../images/logo.svg";
+import LogoSVG from "../../images/apexadventures.jpg";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -152,7 +152,8 @@ const Footer = () => {
           <p className="copyright">
             Copyright {new Date().getFullYear()}. Made by{" "}
             <a href="/" className="copyright-link">
-              Amr Ibrahim
+              Bhairabitsolution.com
+              
             </a>
           </p>
 

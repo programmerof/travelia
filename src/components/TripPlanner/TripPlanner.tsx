@@ -1,16 +1,17 @@
 import "./TripPlanner.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import TripImg from "../../images/trip-1.jpg";
-import TripImg2 from "../../images/trip-2.jpg";
-import TripImg3 from "../../images/trip-3.jpg";
-import TripImg4 from "../../images/trip-4.jpg";
-import TripImg5 from "../../images/trip-5.jpg";
-import TripImg6 from "../../images/trip-6.jpg";
-import TripImg7 from "../../images/trip-7.jpg";
-import TripImg8 from "../../images/trip-8.jpg";
-import TripImg9 from "../../images/trip-9.jpg";
-import TripImg10 from "../../images/trip-10.jpg";
-import TripImg11 from "../../images/trip-11.jpg";
+import TripImg from "../../images/Trip/trip-1.jpg";
+import TripImg2 from "../../images/Trip/trip-2.jpg";
+import TripImg3 from "../../images/Trip/trip-3.jpg";
+import TripImg4 from "../../images/Trip/trip-4.jpg";
+import TripImg5 from "../../images/Trip/trip-5.jpg";
+import TripImg6 from "../../images/Trip/trip-6.jpg";
+import TripImg7 from "../../images/Trip/trip-7.jpg";
+import TripImg8 from "../../images/Trip/trip-8.jpg";
+import TripImg9 from "../../images/Trip/trip-9.jpg";
+import TripImg10 from "../../images/Trip/trip-10.jpg";
+import TripImg11 from "../../images/Trip/trip-11.jpg";
+
 
 interface TripCardProps {
   title: string;

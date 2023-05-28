@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MdClose, MdMenu } from "react-icons/md";
-import LogoSVG from "../../images/logo.svg";
-import "./Header.scss";
+import { Link } from "react-scroll";
+import LogoSVG from "../../images/apexadventures.jpg";
 
+import "./Header.scss";
 
 const Header = () => {
   const [show, setShow] = useState<boolean>(false);
@@ -10,28 +11,30 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      headerRef.current?.classList[window.scrollY > 100 ? 'add' : 'remove']('active');
-    }
+      headerRef.current?.classList[window.scrollY > 100 ? "add" : "remove"](
+        "active"
+      );
+    };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
-  })
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header" ref={headerRef} data-header>
-      <div className={`container ${show ? 'active' : ''}`}>
-        <a href="/" className="logo">
+      <div className={`container ${show ? "active" : ""}`}>
+        <Link to="hero" smooth={true} offset={-70} duration={500} className="logo">
           <img src={LogoSVG} alt="logo" width={187} height={38} />
-        </a>
+        </Link>
 
-        <nav className={`navbar ${show ? 'active' : ''}`} data-navbar>
+        <nav className={`navbar ${show ? "active" : ""}`} data-navbar>
           <div className="navbar-top">
-            <a href="/" className="logo">
+            <Link to="hero" smooth={true} offset={-70} duration={500} className="logo">
               <img src={LogoSVG} alt="logo" width={187} height={38} />
-            </a>
+            </Link>
 
             <button
               className="nav-toggle-btn"
@@ -44,42 +47,39 @@ const Header = () => {
           </div>
           <ul className="navbar-list">
             <li className="navbar-item">
-              <a href="/" className="navbar-link active">
+              <Link to="hero" smooth={false} offset={-70} duration={500} className="navbar-link ">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="navbar-item">
-              <a href="/" className="navbar-link">
+              <Link to="destination" smooth={false} offset={-70} duration={500} className="navbar-link">
                 About
-              </a>
+              </Link>
             </li>
             <li className="navbar-item">
-              <a href="/" className="navbar-link">
+              <Link to="service" smooth={false} offset={-70} duration={500} className="navbar-link">
                 Service
-              </a>
-            </li>
+              </Link>
             
-           
-           
+            </li>
+            {/* ... */}
             <li className="navbar-item">
-              <a href="/" className="navbar-link">
-                Pricing
-              </a>
+              <Link to="gallery" smooth={false} offset={-70} duration={500} className="navbar-link">
+                Gallery
+              </Link>
             </li>
             <li className="navbar-item">
-              <a href="/" className="navbar-link">
+              <Link to="cta" smooth={false} offset={-70} duration={500} className="navbar-link">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="header-action">
-            <a href="/" className="login-btn">
-              Login
-            </a>
-            <a href="/" className="btn btn-primary">
-              Sign Up
-            </a>
+            
+            {/* <a href="/" className="btn btn-primary">
+              The Info Table 
+            </a> */}
           </div>
         </nav>
 
@@ -91,7 +91,11 @@ const Header = () => {
         >
           <MdMenu />
         </button>
-        <div className={`overlay ${show ? 'active' : ''}`} data-overlay data-nav-toggler></div>
+        <div
+          className={`overlay ${show ? "active" : ""}`}
+          data-overlay
+          data-nav-toggler
+        ></div>
       </div>
     </header>
   );

@@ -23,7 +23,7 @@ const Service = (): JSX.Element => {
         </div>
         <ServiceCard
           title="Lot of Choices"
-          text="Total 460+ destinations that we work with."
+          text="Infinite destinations that we work with."
           Icon={ServiceIcon1}
         />
         <ServiceCard

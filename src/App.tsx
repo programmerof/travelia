@@ -27,14 +27,24 @@ function App() {
         <Header />
         <Routes>
           <Route path="/service" element={<Service />} />
+
+          <Route path="/cta" element={<CTA />} />
+        <Route path="/destination" element={<Destination />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/footer" element={<Footer />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/hero" element={<Hero />} />
+        <Route path="/loader" element={<Loader />} />
+        {/* <Route path="/service" element={<Service />} /> */}
+        <Route path="/trip-planner" element={<TripPlanner />} />
         </Routes>
       </Router>
-
       <main>
         <Hero />
         <Service />
         <Destination />
-        <TripPlanner />
+        {/* <TripPlanner /> */}
         <Experience />
         <Gallery />
         <CTA />

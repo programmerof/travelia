@@ -1,5 +1,5 @@
 import CTABg from "../../images/cta-bg.jpg";
-import TitleIcon from "../../images/title-icon.svg";
+import TitleIcon from "../../images/nepalicon.png";
 
 import "./CTA.scss";
 
@@ -12,7 +12,7 @@ const CTA = () => {
           style={{ backgroundImage: `url(${CTABg})` }}
         >
           <h2 className="h2 title section-title">
-            Prepare Yourself & Let’s Explore The Beauty Of The World
+            Prepare Yourself & Let’s Explore The Beauty Of The nepal
             <img
               src={TitleIcon}
               alt="title icon"

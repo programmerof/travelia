@@ -2,22 +2,19 @@ import React from "react";
 
 import { AiFillStar } from "react-icons/ai";
 
-import Destination1 from "../../images/destination-1.jpg";
-import Destination2 from "../../images/destination-2.jpg";
-import Destination3 from "../../images/destination-3.jpg";
-import Destination4 from "../../images/destination-4.jpg";
-import Destination5 from "../../images/destination-5.jpg";
-import Destination6 from "../../images/destination-6.jpg";
+import Destination1 from "../../images/Destination/Destination-1.webp";
+import Destination2 from "../../images/Destination/Destination-2.webp";
+import Destination3 from "../../images/Destination/Destination-3.webp";
 
 import "./Destination.scss";
 
 interface DestinationCardProps {
   title: string;
+  duration: string;
+  difficulty: string;
+  description: string;
   icon: string;
   address: string;
-  price: number;
-  rating: number;
-  review: string;
 }
 
 const Destination = () => {
@@ -29,52 +26,28 @@ const Destination = () => {
         <h2 className="h2 title section-title">Explore Top Destination</h2>
         <ul className="destination-list">
           <DestinationCard
-            title="Enjoy the Beauty of the del Pincio"
+            title="Annapurna Base Camp Trek"
+            duration="13 days"
+            difficulty="Hard"
+            description="Offers diverse landscapes and a chance to visit Annapurna Sanctuary."
             icon={Destination1}
-            price={340}
-            address="Rome, Italy"
-            rating={4.7}
-            review="11.1k"
+            address="Pokhara, Kaski, Gandaki, 33700"
           />
           <DestinationCard
-            title="Enjoy the Beauty of the Pakistan Monument"
+            title="Glorious Kathmandu"
+            duration="8 days"
+            difficulty="Hard"
+            description="Explore the capital city of Nepal, visit Durbar Square, and admire temples and monuments."
             icon={Destination2}
-            price={340}
-            address="Islamabad, Pakistan"
-            rating={4.6}
-            review="16.9k"
+            address="Kathmandu, Kathmandu, Bagmati, 44600"
           />
           <DestinationCard
-            title="Enjoy the Beauty of the Burj Khalifa"
+            title="Everest Gokyo Lake Trek"
+            duration="12 days"
+            difficulty="Hard"
+            description="Experience beautiful mountain views and visit Gokyo Lake and Gokyo Ri for incredible viewpoints over Everest."
             icon={Destination3}
-            price={340}
-            address="Skyscraper in Dubia"
-            rating={4.7}
-            review="120k"
-          />
-          <DestinationCard
-            title="Enjoy the Beauty of the Milaidhoo"
-            icon={Destination4}
-            price={340}
-            address="Island in Maldives"
-            rating={4.7}
-            review="70"
-          />
-          <DestinationCard
-            title="Enjoy the Beauty of the Ko Tao"
-            icon={Destination5}
-            price={340}
-            address="Island in theGulf of Thailand"
-            rating={4.5}
-            review="985"
-          />
-          <DestinationCard
-            title="Enjoy the Beauty of the Grand Mecidiye Mosque"
-            icon={Destination6}
-            price={340}
-            address="Mosque in Istanbul, Turkiye"
-            rating={4.8}
-            review="29.6k"
+            address="Lukla, Solukhumbu, Province 1, 56000"
           />
         </ul>
 
@@ -91,11 +64,11 @@ interface ImgHolderVariables extends React.CSSProperties {
 
 const DestinationCard = ({
   title,
+  duration,
+  difficulty,
+  description,
   icon,
-  price,
   address,
-  rating,
-  review,
 }: DestinationCardProps) => {
   return (
     <li>
@@ -109,7 +82,6 @@ const DestinationCard = ({
             className="img-cover"
             loading="lazy"
           />
-          <span className="card-price">${price}</span>
         </div>
 
         <h3 className="h3 title">
@@ -122,10 +94,12 @@ const DestinationCard = ({
 
         <div className="card-rating">
           <span className="span">
-            <AiFillStar className="star" /> {rating}
+            <AiFillStar className="star" /> {difficulty}
           </span>
-          <p className="rating-text">({review} Review)</p>
+          <p className="rating-text">{duration}</p>
         </div>
+
+        <p className="card-description">{description}</p>
       </div>
     </li>
   );
