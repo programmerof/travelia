@@ -1,0 +1,30 @@
+.trip-planner .trip-card {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+  overflow: hidden;
+  max-width: 100%;
+}
+.trip-planner .trip-card:is(:hover, :focus-visible) img {
+  transform: scale(1.1) rotate(5deg);
+}
+.trip-planner .trip-card .img-wrapper {
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.trip-planner .trip-card .img-wrapper img {
+  transition: 500ms ease;
+  width: 100%;
+}
+.trip-planner .trip-card__detail {
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+@media (min-width: 768px) {
+  .trip-planner .section-title,
+  .trip-planner .section-subtitle {
+    text-align: center;
+  }
+}/*# sourceMappingURL=TripPlanner.css.map */

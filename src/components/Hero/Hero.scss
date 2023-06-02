@@ -1,134 +1,60 @@
-@use "../../sass/" as *;
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 
-.hero {
-  padding-block-start: 150px;
+  &__image {
+    margin-bottom: 30px;
 
-  @include desktop {
-    padding-block-start: 50px;
+    img {
+      width: 100%;
+      max-width: 600px; // Adjust the max-width value as needed
+      border-radius: 8px;
+    }
   }
 
-  .container {
-    display: grid;
-    gap: 50px;
+  &__content {
+    text-align: center;
 
-    @include desktop-md {
-      grid-template-columns: 0.8fr 1fr;
-      gap: 0;
-      align-items: center;
+    &__title {
+      font-size: 32px;
+      margin-bottom: 20px;
     }
-// this is for the box with the text 
-    .hero-subtitle {
-      background-color: $bg-misty-rose;
-      color: $text-light-coral;
-      font-size: $fontSize-7;
+
+    &__description {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    &__cta {
       display: flex;
-      align-items: center;
-      gap: 10px;
-      max-width: max-content;
-      padding: 8px 20px;
-      border-radius: $radius-pill;
-
-      @include desktop {
-        $fontSize-7: 1.8rem;
-        padding: 10px 30px;
-      }
+      justify-content: center;
+      margin-top: 20px;
     }
 
-    .hero-title {
-      margin-block: 20px;
-
-      @include desktop-lg {
-        margin-block: 30px;
-      }
-    }
-    .hero-text {
-      margin-block-end: 30px;
-
-      @include tablet {
-        max-width: 42ch;
-      }
-
-      @include desktop-lg {
-        margin-block-end: 50px;
-      }
-    }
-    .btn-secondary {
-      margin-block-end: 20px;
-    }
-
-    .wrapper {
-      @include desktop-md {
-        flex-wrap: wrap;
-      }
-      .hero-btn {
-        color: $text-gunmetal;
-        font-weight: $weight-medium;
-        display: flex;
-        align-items: center;
-        gap: 30px;
-        transition: $transition-1;
-
-        @include desktop {
-          gap: 32px;
-        }
-
-        .btn-img {
-          position: relative;
-          width: 60px;
-          height: 60px;
-          background-color: $bg-gainsboro;
-          border-radius: $radius-circle;
-          box-shadow: $shadow-1;
-
-          @include desktop {
-            width: 80px;
-            height: 80px;
-          }
-
-          .img-cover {
-            border-radius: inherit;
-          }
-          .icon-play {
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(50%, -50%);
-            background-color: $bg-white;
-            padding: 10px;
-            border-radius: $radius-circle;
-            box-shadow: $shadow-1;
-            box-sizing: content-box;
-
-            @include desktop {
-              padding: 12px;
-            }
-          }
-        }
-        &:is(:hover, :focus-visible) {
-          color: $text-majorelle-blue;
-        }
-      }
-
-      @include tablet {
-        display: flex;
-        align-items: center;
-        gap: 30px;
-
-        .btn {
-          margin-block-end: 0;
-        }
-      }
+    &__cta-button {
+      padding: 10px 20px;
+      font-size: 200px;
+      background-color: #F2C94C;
+      color: #FFFFFF;
+      border: 2px solid #F2C94C;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
+}
 
-  .hero-banner {
-    @include desktop {
-      max-width: 550px;
-      margin-inline: auto;
-    }
+// Media queries for responsiveness
+@media (min-width: 768px) {
+  .home-section {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 200px;
 
-    @include desktop-md {
-      max-width: unset;
+    &__image {
+      margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }

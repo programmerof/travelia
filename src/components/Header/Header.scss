@@ -9,7 +9,7 @@
   z-index: 4;
 
   &.active {
-    position: fixed;
+    position: relative ;  // to make it dont show - relative and to show - fixed
     background-color: $bg-white;
     box-shadow: $shadow-1;
     animation: slideIn 500ms ease forwards;
@@ -42,10 +42,10 @@
   }
   .logo {
     img {
-      width: 160px;
+      width: 120px; /* Adjust the width to your desired size */
 
       @include desktop-lg {
-        width: 180px;
+        width: 140px; /* Adjust the width for larger screens if needed */
       }
     }
   }
@@ -82,12 +82,13 @@
 
     .navbar-list {
       margin-block-start: 50px;
-
+    
       @include desktop-md {
         margin-block-start: 0;
         display: flex;
         gap: 30px;
         margin-inline: auto;
+        justify-content: flex-end; /* Add this line to align items to the end */
       }
 
       @include desktop-lg {
@@ -99,12 +100,15 @@
       }
 
       .navbar-link {
-        position: relative;
+        position: relative; //navitem
         color: $text-gunmetal;
         font-size: $fontSize-7;
         font-weight: $weight-medium;
         padding-block: 8px;
         transition: $transition-1;
+        display: flex;
+ 
+  align-items: flex-end;
 
         &::before {
           content: "";

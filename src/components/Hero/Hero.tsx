@@ -1,60 +1,30 @@
-import React from "react";
-import { MdOutlineChevronRight } from "react-icons/md";
-import { BsPlayFill } from "react-icons/bs";
-import HeroBg from "../../images/hero-bg.jpg";
-import TitleIcon from "../../images/title-icon.svg";
-import HeroBtn from "../../images/hero-button-img.jpg";
-import HeroBanner from "../../images/nepali trek painting.jpg";
-import "./Hero.scss";
+import React from 'react';
+import './Hero.scss';
+import image from "../src/images/image.jpg";
 
-const Hero = () => {
+const HomeSection = () => {
   return (
-    <article>
-      <section
-        className="section hero has-bg-image"
-        aria-label="hero"
-        style={{ backgroundImage: `url(${HeroBg})` }}
-      >
-        <div className="container">
-          <div className="hero-content">
-            <p className="hero-subtitle">
-            Discover Nepal's Majestic Trails
-{/* 🌍🏔️🥾🚶‍♂️🏞️🌄🏕️🇳🇵 */}🚶‍♂️🏞️🏔️
-              <img src={TitleIcon} width={20} height={20} alt="world icon" />
-            </p>
-
-            <h1 className="h1 title hero-title">
-            Embark on Unforgettable Treks!</h1>
-            <p className="hero-text">
-              Unleash Your Adventurous Spirit with our Expert Guides,as We Take You on Unforgettable Trekking Expeditions in Nepal!
-            </p>
-
-            <div className="wrapper">
-              <a href="/" className="btn btn-secondary">
-                <span className="span">Plan a Trip</span>
-                <MdOutlineChevronRight />
-              </a>
-              <button className="hero-btn">
-                {/* <div className="btn-img">
-                  <img
-                    src={HeroBtn}
-                    alt="our story"
-                    width={100}
-                    className="img-cover"
-                  />
-                  <BsPlayFill className='icon-play' />
-                </div> */}
-                {/* <p className="text">Watch our Story</p> */}
-              </button>
-            </div>
-          </div>
-          <figure className="hero-banner">
-            <img src={HeroBanner} alt="hero banner" className='w-100' width='631' height='735' />
-          </figure>
+    <section className="home-section">
+       <div className="home-section__image">
+        <img src="https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2018/05/08140741/download-3.jpeg" alt="Himalayas at sunrise" />
+      </div>
+      <div className="home-section__content">
+        <h2 className="home-section__title">Welcome to Adventure Haven Nepal!</h2>
+        <p className="home-section__description">
+          Are you ready to experience the ultimate adventure amidst the majestic Himalayas? Adventure Haven Nepal
+          invites you to discover the untamed beauty of Nepal through thrilling treks, heart-pounding expeditions,
+          and unforgettable cultural encounters. We are passionate about providing you with the most exhilarating and
+          authentic adventure experiences in the land of the highest peaks on Earth.
+        </p>
+        <div className="home-section__cta">
+          <button className="home-section__cta-button">Contact Us</button>
         </div>
-      </section>
-    </article>
+        <div className="home-section__cta">
+          <button className="home-section__cta-button bg-red-500">Get a Trip Guide</button>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Hero;
+export default HomeSection;

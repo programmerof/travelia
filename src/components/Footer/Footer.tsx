@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p className="copyright">
             Copyright {new Date().getFullYear()}. Made by{" "}
-            <a href="/" className="copyright-link">
+            <a href="Bhairabitsolution.com" className="copyright-link">
               Bhairabitsolution.com
               
             </a>

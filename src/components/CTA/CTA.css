@@ -1,0 +1,40 @@
+.cta .cta-card {
+  background-color: hsl(0, 100%, 95%);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+@media (min-width: 768px) {
+  .cta .cta-card {
+    padding: 80px 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .cta .cta-card {
+    padding-block: 120px;
+  }
+}
+.cta .section-title {
+  margin-block: 0 20px;
+  font-size: 3.3rem;
+}
+@media (min-width: 992px) {
+  .cta .section-title {
+    max-width: 25ch;
+    margin-inline: auto;
+  }
+}
+.cta .section-title .img {
+  display: inline-block;
+}
+.cta .btn {
+  margin-inline: auto;
+  -webkit-margin-before: 20px;
+          margin-block-start: 20px;
+}
+@media (min-width: 768px) {
+  .cta .btn {
+    -webkit-margin-before: 30px;
+            margin-block-start: 30px;
+  }
+}/*# sourceMappingURL=CTA.css.map */

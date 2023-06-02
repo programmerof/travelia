@@ -1,0 +1,62 @@
+@use "../../sass/" as *;
+
+// Import any additional mixins or variables needed
+
+// Variables
+$primaryColor: #2196f3;       // Defines the primary color used in the form
+$secondaryColor: #fbc02d;     // Defines the secondary color used in the filtered site styling
+$backgroundColor: #f5f5f5;   // Defines the background color of the form
+$formPadding: 20px;           // Defines the padding around the form
+$inputHeight: 40px;           // Defines the height of input fields
+$buttonHeight: 40px;          // Defines the height of buttons
+
+// Form Styles
+.form {
+  background-color: $backgroundColor;        // Sets the background color of the form
+  padding: $formPadding;                      // Sets the padding around the form
+  border-radius: 8px;                         // Sets the border radius of the form
+
+  label {
+    font-weight: bold;                        // Sets the font weight of the labels
+  }
+
+  select,
+  input[type='text'] {
+    width: 100%;                               // Sets the width of select and text input fields to 100%
+    height: $inputHeight;                      // Sets the height of select and text input fields
+    padding: 8px;                              // Sets the padding within select and text input fields
+    margin-bottom: 10px;                       // Sets the margin at the bottom of select and text input fields
+    border: 1px solid $primaryColor;            // Sets the border color of select and text input fields
+    border-radius: 4px;                        // Sets the border radius of select and text input fields
+    font-size: 16px;                           // Sets the font size of select and text input fields
+  }
+
+  button[type='submit'] {
+    width: 100%;                               // Sets the width of submit buttons to 100%
+    height: $buttonHeight;                     // Sets the height of submit buttons
+    background-color: $primaryColor;           // Sets the background color of submit buttons
+    color: white;                              // Sets the text color of submit buttons
+    border: none;                              // Removes the border of submit buttons
+    border-radius: 4px;                        // Sets the border radius of submit buttons
+    font-size: 16px;                           // Sets the font size of submit buttons
+    cursor: pointer;                           // Sets the cursor style of submit buttons
+  }
+}
+
+// Styling for filtered sites
+.filtered-site {
+  margin-top: 20px;                           // Sets the top margin of filtered sites
+  padding: 10px;                              // Sets the padding within filtered sites
+  border: 1px solid $secondaryColor;           // Sets the border color of filtered sites
+  border-radius: 4px;                         // Sets the border radius of filtered sites
+
+  h3 {
+    color: $primaryColor;                      // Sets the color of h3 headings within filtered sites
+    font-size: 20px;                           // Sets the font size of h3 headings within filtered sites
+    margin-bottom: 5px;                        // Sets the bottom margin of h3 headings within filtered sites
+  }
+
+  p {
+    margin-bottom: 5px;                        // Sets the bottom margin of paragraphs within filtered sites
+  }
+}

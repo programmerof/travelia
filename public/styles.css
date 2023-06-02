@@ -1,0 +1,221 @@
+@use "./sass/" as *;
+
+// Global
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  -webkit-transition: $transition-2;
+  transition: $transition-2;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5d5d5d;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #eee9e9;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  height: auto;
+}
+
+a,
+img,
+span,
+input,
+button,
+io-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  font: inherit;
+  border: none;
+}
+
+input {
+  width: 100%;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+io-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+html {
+  font-family: $ff-poppins;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-lavender-blush;
+  color: $text-granite-gray;
+  font-size: $fontSize-6;
+  line-height: 1.8;
+}
+
+// Reused Styles
+
+.container {
+  padding-inline: 16px;
+  @include tablet {
+    max-width: 540px;
+
+    width: 100%;
+
+    margin-inline: auto;
+  }
+  @include desktop {
+    max-width: 720px;
+  }
+  @include desktop-md {
+    max-width: 950px;
+  }
+  @include desktop-lg {
+    max-width: 1150px;
+  }
+  @include desktop-xl {
+    max-width: 1350px;
+  }
+}
+
+.btn {
+  height: 50px;
+  color: $text-white;
+  padding-inline: 30px;
+  border-radius: $radius-pill;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: -webkit-max-content;
+  max-width: max-content;
+  transition: $transition-1;
+  @include desktop {
+    height: 60px;
+
+    padding-inline: 40px;
+  }
+}
+
+.btn-primary {
+  background-color: $bg-majorelle-blue;
+  &:is(:hover, :focus-visible) {
+    background-color: $bg-ocean-blue;
+    box-shadow: $shadow-2;
+  }
+}
+
+.btn-secondary {
+  background-color: $bg-red-salsa;
+  &:is(:hover, :focus-visible) {
+    background-color: $bg-english-vermillion;
+    box-shadow: $shadow-3;
+  }
+}
+
+.section {
+  -webkit-padding-after: $section-spacing;
+          padding-block-end: $section-spacing;
+}
+
+.has-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  color: $text-gunmetal;
+  font-weight: $weight-semiBold;
+  line-height: 1.45;
+}
+
+.h1 {
+  font-size: $fontSize-1;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: $fontSize-2;
+}
+
+.h3 {
+  font-size: $fontSize-4;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: $transition-2;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.section-subtitle {
+  color: $text-majorelle-blue;
+  font-weight: $weight-medium;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-block: 10px;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  background-color: $bg-gainsboro;
+  overflow: hidden;
+}
+
+@include desktop {
+  :root {
+    $fontSize-1: 4.8rem;
+    $fontSize-2: 4rem;
+    $fontSize-3: 2.8rem;
+    $fontSize-4: 2.6rem;
+    $fontSize-5: 2.2rem;
+    $fontSize-6: 1.8rem;
+    $fontSize-7: 1.6rem;
+  }
+
+  :is(.destination, .gallery) :is(.section-subtitle, .section-title) {
+    text-align: center;
+  }
+}

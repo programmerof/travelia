@@ -1,0 +1,112 @@
+.destination .section-title {
+  -webkit-margin-after: 40px;
+          margin-block-end: 40px;
+}
+@media (min-width: 768px) {
+  .destination .section-title {
+    -webkit-margin-after: 65px;
+            margin-block-end: 65px;
+  }
+}
+.destination-list {
+  display: grid;
+  gap: 30px;
+}
+@media (min-width: 575px) {
+  .destination-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 768px) {
+  .destination-list {
+    gap: 50px 35px;
+  }
+}
+@media (min-width: 992px) {
+  .destination-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1400px) {
+  .destination-list {
+    gap: 50px;
+  }
+}
+.destination-card .card-banner {
+  position: relative;
+  border-radius: 30px;
+}
+.destination-card:is(:hover, :focus-within) .img-cover {
+  transform: scale(1.05);
+}
+.destination-card .card-price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(249, 95%, 63%);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.45;
+  padding: 5px 15px;
+  border-radius: 200px;
+}
+@media (min-width: 1200px) {
+  .destination-card .card-price {
+    font-size: 2rem;
+    padding: 8px 20px;
+  }
+}
+.destination-card .card-title {
+  margin-block: 15px 5px;
+  transition: 250ms ease;
+}
+@media (min-width: 768px) {
+  .destination-card .card-title {
+    -webkit-margin-before: 25px;
+            margin-block-start: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .destination-card .card-title {
+    margin-block: 30px 10px;
+  }
+}
+.destination-card .card-title:is(:hover, :focus-visible) {
+  color: hsl(249, 95%, 63%);
+}
+.destination-card :is(.card-rating, .span) {
+  display: flex;
+  align-items: center;
+}
+.destination-card .card-rating {
+  -webkit-margin-before: 10px;
+          margin-block-start: 10px;
+  gap: 10px;
+}
+@media (min-width: 1200px) {
+  .destination-card .card-rating {
+    -webkit-margin-before: 15px;
+            margin-block-start: 15px;
+  }
+}
+.destination-card .card-rating .span {
+  background-color: hsla(48, 100%, 50%, 0.1);
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 200px;
+}
+.destination-card .card-rating .span .star {
+  color: hsl(48, 100%, 50%);
+}
+.destination .btn {
+  margin-inline: auto;
+  -webkit-margin-before: 40px;
+          margin-block-start: 40px;
+}
+@media (min-width: 768px) {
+  .destination .btn {
+    -webkit-margin-before: 60px;
+            margin-block-start: 60px;
+  }
+}/*# sourceMappingURL=Destination.css.map */
