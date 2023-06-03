@@ -1,6 +1,9 @@
 import './Form.css'; // Import the CSS file
 import React, { useState } from 'react';
 import axios from 'axios';
+import trekkingSites from './trekkingSites'; // Import the trekkingSites array
+import { trekTimeOptions, soloGroupOptions } from './formOptions';
+
 
 const TrekkingForm = () => {
   const [province, setProvince] = useState('');
@@ -11,21 +14,6 @@ const TrekkingForm = () => {
   const [soloGroup, setSoloGroup] = useState('');
   const [trekLocation, setTrekLocation] = useState('');
 
-  const trekkingSites = [
-    // Existing trekkingSites data
-    {
-      name: 'Annapurna Base Camp Trek',
-      duration: '13 days',
-      difficulty: 'Hard',
-      description: 'Offers diverse landscapes and a chance to visit Annapurna Sanctuary.',
-      location: {
-        city: 'Pokhara',
-        district: 'Kaski',
-        province: 'Gandaki',
-        zipCode: '33700',
-      },
-    }
-  ];
 
 
   const [filteredSites, setFilteredSites] = useState(trekkingSites);
@@ -129,49 +117,31 @@ const TrekkingForm = () => {
       {/* Trek Time */}
       <label htmlFor="trekTime">Trek Time:</label>
       <select
-        id="trekTime"
-        value={trekTime}
-        onChange={(e) => setTrekTime(e.target.value)}
-      >
-        <option value="">All</option>
-        <option value="Baisakh">Baisakh</option>
-        <option value="Jestha">Jestha</option>
-        <option value="Ashadh">Ashadh</option>
-        <option value="Shrawan">Shrawan</option>
-        <option value="Bhadra">Bhadra</option>
-        <option value="Ashwin">Ashwin</option>
-        <option value="Kartik">Kartik</option>
-        <option value="Mangsir">Mangsir</option>
-        <option value="Poush">Poush</option>
-        <option value="Magh">Magh</option>
-        <option value="Falgun">Falgun</option>
-        <option value="Chaitra">Chaitra</option>
-      </select>
-
-      {/* Solo/Group Preference
-            <label htmlFor="groupPreference">Trek Time:</label>
-      <select
-        id="groupPreference"
-        value={groupPreference}
-        onChange={(e) => setGroupPreference(e.target.value)}
-      >
-        <option value="">All</option>
-        <option value="Solo">Solo</option>
-        <option value="Group">Group</option>
-              </select> */}
+  id="trekTime"
+  value={trekTime}
+  onChange={(e) => setTrekTime(e.target.value)}
+>
+  {trekTimeOptions.map((option) => (
+    <option key={option.value} value={option.value}>
+      {option.label}
+    </option>
+  ))}
+</select>
 
 
-
-      {/* Solo/Group Preference */}
-      <label htmlFor="soloGroup">Solo/Group:</label>
-      <select
-        id="soloGroup"
-        value={soloGroup}
-        onChange={(e) => setSoloGroup(e.target.value)}
-      >
-        <option value="solo">Solo</option>
-        <option value="group">Group</option>
-      </select>
+    {/* Solo/Group Preference */}
+<label htmlFor="soloGroup">Solo/Group:</label>
+<select
+  id="soloGroup"
+  value={soloGroup}
+  onChange={(e) => setSoloGroup(e.target.value)}
+>
+  {soloGroupOptions.map((option) => (
+    <option key={option.value} value={option.value}>
+      {option.label}
+    </option>
+  ))}
+</select>
 
 
       {/* Trek Location (Trek Name) */}
