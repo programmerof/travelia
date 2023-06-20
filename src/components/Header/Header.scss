@@ -1,15 +1,15 @@
 @use "../../sass/" as *;
 
 .header {
-  padding-block: 30px;
-  position: absolute;
+  padding-block: 10px;
+  // position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 4;
 
   &.active {
-    position: relative ;  // to make it dont show - relative and to show - fixed
+    position: relative; // to make it dont show - relative and to show - fixed
     background-color: $bg-white;
     box-shadow: $shadow-1;
     animation: slideIn 500ms ease forwards;
@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .overlay {
     position: fixed;
     top: 0;
@@ -40,15 +41,19 @@
       opacity: 0.5;
     }
   }
+
   .logo {
     img {
-      width: 120px; /* Adjust the width to your desired size */
+      width: 120px;
+      /* Adjust the width to your desired size */
 
       @include desktop-lg {
-        width: 140px; /* Adjust the width for larger screens if needed */
+        width: 140px;
+        /* Adjust the width for larger screens if needed */
       }
     }
   }
+
   .nav-toggle-btn {
     font-size: 3.2rem;
   }
@@ -82,13 +87,14 @@
 
     .navbar-list {
       margin-block-start: 50px;
-    
+
       @include desktop-md {
         margin-block-start: 0;
         display: flex;
         gap: 30px;
         margin-inline: auto;
-        justify-content: flex-end; /* Add this line to align items to the end */
+        justify-content: flex-end;
+        /* Add this line to align items to the end */
       }
 
       @include desktop-lg {
@@ -107,8 +113,7 @@
         padding-block: 8px;
         transition: $transition-1;
         display: flex;
- 
-  align-items: flex-end;
+        align-items: flex-end;
 
         &::before {
           content: "";
@@ -146,6 +151,7 @@
         }
       }
     }
+
     .header-action {
       margin-block-start: auto;
       padding-block-start: 20px;
@@ -190,6 +196,7 @@
   }
 
   @include desktop-md {
+
     .nav-toggle-btn,
     .navbar-top,
     .overlay {
@@ -210,6 +217,7 @@
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
