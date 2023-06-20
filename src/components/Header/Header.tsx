@@ -1,7 +1,7 @@
   import React, { useState, useRef, useEffect } from "react";
   import { MdClose, MdMenu } from "react-icons/md";
   import { Link } from "react-scroll";
-  import LogoSVG from "../../images/apexadventures.jpg";
+  import LogoSVG from "../../images/logoApex.png";
 
   import "./Header.scss";
 
@@ -27,7 +27,7 @@
       <header className="header" ref={headerRef} data-header>
         <div className={`container ${show ? "active" : ""}`}>
           <Link to="hero" smooth={true} offset={-70} duration={500} className="logo">
-          <img src={LogoSVG} alt="logo" width={120} height={24} />
+          <img src={LogoSVG} alt="logo" width={120} height={24}/>
           </Link>
 
           <nav className={`navbar ${show ? "active" : ""}`} data-navbar>

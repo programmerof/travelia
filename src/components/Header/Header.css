@@ -1,6 +1,5 @@
 .header {
-  padding-block: 30px;
-  position: absolute;
+  padding-block: 10px;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,11 +37,13 @@
   opacity: 0.5;
 }
 .header .logo img {
-  width: 120px; /* Adjust the width to your desired size */
+  width: 120px;
+  /* Adjust the width to your desired size */
 }
 @media (min-width: 1200px) {
   .header .logo img {
-    width: 140px; /* Adjust the width for larger screens if needed */
+    width: 140px;
+    /* Adjust the width for larger screens if needed */
   }
 }
 .header .nav-toggle-btn {
@@ -84,7 +85,8 @@
     display: flex;
     gap: 30px;
     margin-inline: auto;
-    justify-content: flex-end; /* Add this line to align items to the end */
+    justify-content: flex-end;
+    /* Add this line to align items to the end */
   }
 }
 @media (min-width: 1200px) {

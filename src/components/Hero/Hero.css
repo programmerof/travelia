@@ -1,42 +1,67 @@
 .home-section {
+  height: 75dvh;
+  width: 90vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 200px;
+  padding: 20px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5rem;
+  background: url("https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2018/05/08140741/download-3.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-.home-section__image {
-  flex: 1;
-  margin-right: 300px;
-}
-.home-section__image img {
+.home-section .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  border-radius: 8px;
+  background: linear-gradient(15deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  z-index: -1;
+  border-radius: 5rem;
 }
 .home-section__content {
-  flex: 1;
   text-align: center;
+  z-index: 10;
 }
 .home-section__content__title {
   font-size: 32px;
   margin-bottom: 20px;
+  color: orangered;
 }
 .home-section__content__description {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 1000px;
+  color: red;
 }
 .home-section__content__cta {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 .home-section__content__cta-button {
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 200px;
   background-color: #F2C94C;
   color: #FFFFFF;
-  border: none;
+  border: 2px solid #F2C94C;
   border-radius: 4px;
   cursor: pointer;
 }
-.home-section__content__cta-button:hover {
-  background-color: #F5B318;
+
+@media (min-width: 768px) {
+  .home-section {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 200px;
+  }
+  .home-section__image {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=Hero.css.map */

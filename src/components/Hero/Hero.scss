@@ -1,46 +1,68 @@
 .home-section {
+  height: 75dvh;
+  width: 90vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  position: relative;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5rem;
+  background: url('https://www.muchbetteradventures.com/magazine/content/images/size/w2000/2018/05/08140741/download-3.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  // margin-top: 10rem;
 
-  &__image {
-    margin-bottom: 30px;
-
-    img {
-      width: 100%;
-      max-width: 600px; // Adjust the max-width value as needed
-      border-radius: 8px;
-    }
+  .overlay{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(40deg ,rgba(0, 0, 0, 0.750), rgba(0, 0, 0, 0.350)) ;
+    z-index: -1;
+    border-radius: 5rem;
   }
 
   &__content {
     text-align: center;
+    z-index: 10;
+    transform: translateY(-5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 
-    &__title {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .home-section__title {
+      font-size: 35px;
+      color: white;
+      
+    }
+    
+    .home-section__description {
+      font-size: 13px;
+      color: rgba(245, 245, 245, 0.7);
+      // width: 70%;
     }
 
-    &__description {
-      font-size: 18px;
-      margin-bottom: 30px;
-    }
-
-    &__cta {
+    .home-section__cta {
+      width: 40rem;
       display: flex;
-      justify-content: center;
-      margin-top: 20px;
+      justify-content: space-around;
+      align-items: center;
+
     }
 
-    &__cta-button {
-      padding: 10px 20px;
-      font-size: 200px;
-      background-color: #F2C94C;
-      color: #FFFFFF;
-      border: 2px solid #F2C94C;
-      border-radius: 4px;
-      cursor: pointer;
+    .home-section__cta-button {
+      background: royalblue;
+      padding: 1rem 3rem;
+      border-radius: 2rem;
+      color: white;
+      margin-top: 5rem;
     }
   }
 }
