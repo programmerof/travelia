@@ -5,6 +5,7 @@
 }
 .form label {
   font-weight: bold;
+  color: golden;
 }
 .form select,
 .form input[type=text] {
@@ -15,6 +16,7 @@
   border: 1px solid #2196f3;
   border-radius: 4px;
   font-size: 16px;
+  color: blue;
 }
 .form button[type=submit] {
   width: 100%;

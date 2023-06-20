@@ -18,6 +18,7 @@ $buttonHeight: 40px;          // Defines the height of buttons
 
   label {
     font-weight: bold;                        // Sets the font weight of the labels
+    color: golden;                            // Sets the font color of the labels to golden
   }
 
   select,
@@ -29,6 +30,7 @@ $buttonHeight: 40px;          // Defines the height of buttons
     border: 1px solid $primaryColor;            // Sets the border color of select and text input fields
     border-radius: 4px;                        // Sets the border radius of select and text input fields
     font-size: 16px;                           // Sets the font size of select and text input fields
+    color: blue;                               // Sets the text color of select and text input fields to blue
   }
 
   button[type='submit'] {
